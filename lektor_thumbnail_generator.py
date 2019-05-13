@@ -33,7 +33,7 @@ class ResizedImageBuildProgram(AttachmentBuildProgram):
             height = int(conf.get("max_height", "0"))
 
             if not height:
-                _, height = compute_dimensions(source_img, width, w, h)
+                _, height = compute_dimensions(None, width, w, h)
 
             df = artifact.source_obj.url_path
             ext_pos = df.rfind(".")
